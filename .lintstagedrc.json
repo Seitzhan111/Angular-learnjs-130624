@@ -1,0 +1,4 @@
+{
+  "*.{ts,js}": ["npx prettier --write"],
+  "*.html": ["npx prettier --write"]
+}

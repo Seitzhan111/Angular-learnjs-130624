@@ -1,0 +1,84 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-gap: 20px;
+  justify-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  text-align: center;
+  border: none;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:
+      0 12px 24px rgba(0, 0, 0, 0.2),
+      0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    height: 350px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.btn:active {
+  background-color: #004085;
+  transform: scale(0.98);
+}

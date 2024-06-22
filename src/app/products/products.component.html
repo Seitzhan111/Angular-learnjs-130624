@@ -1,0 +1,29 @@
+<div class="cards">
+  @for (product of products; track product._id) {
+    <div class="card">
+      <div class="card__image-wrapper">
+        <img
+          src="{{ product.images[0].url }}"
+          alt="{{ product.name }}"
+          class="card__image"
+        />
+      </div>
+      <p class="bold">{{ product.name }}</p>
+      <p>
+        Категория: <span class="bold">{{ product.subCategory }}</span>
+      </p>
+      <p>
+        Остаток: <span class="bold">{{ product.feedbacksCount }}шт.</span>
+      </p>
+      <div class="card__info">
+        <p>
+          Цена: <span class="bold">{{ product.price }}$</span>
+        </p>
+        <p>
+          Рейтинг: <span class="bold">{{ product.rating }}</span>
+        </p>
+      </div>
+      <button (click)="addToCart(product)" class="btn">В корзину</button>
+    </div>
+  }
+</div>
